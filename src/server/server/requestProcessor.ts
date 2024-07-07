@@ -115,6 +115,7 @@ function getHandler(pathname: string): IHandler | undefined {
 export function processRequest(
   req: Request,
   res: Response): void {
+  res.setHeader('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
   const start = process.hrtime.bigint();
   let pathnameForLatency: string | undefined = undefined;
   try {

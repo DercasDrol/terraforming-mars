@@ -97,7 +97,7 @@ async function start() {
   }
   GameLoader.getInstance().maintenance();
 
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 8081;
   console.log(`Starting ${raw_settings.head}, built at ${raw_settings.builtAt}`);
   console.log(`Starting server on port ${port}`);
 

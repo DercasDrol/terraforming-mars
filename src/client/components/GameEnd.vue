@@ -35,7 +35,7 @@
                   </div>
               </div>
           </div>
-          <div class="game_end_navigation">
+          <!--<div class="game_end_navigation">
             <div>
               <a href="new-game">
                   <AppButton size="big" type="back" />
@@ -47,7 +47,7 @@
                   <span v-i18n>Go to main page</span>
               </a>
             </div>
-          </div>
+          </div>-->
           <div v-if="!isSoloGame || game.isSoloModeWin" class="game-end-winer-announcement">
               <span v-for="p in winners" :key="p.color"><span :class="'log-player ' + getEndGamePlayerRowColorClass(p.color)">{{ p.name }}</span></span> <span v-i18n>won!</span>
           </div>

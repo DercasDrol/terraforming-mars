@@ -30,7 +30,7 @@ export class PostgreSQL implements IDatabase {
     private config: pg.ClientConfig = {
       connectionString: process.env.POSTGRES_HOST,
     }) {
-    if (config.connectionString?.startsWith('postgres')) {
+    if (config.connectionString?.startsWith('postgres') && process.env.USE_PG_SSL === 'true') {
       config.ssl = {
         // heroku uses self-signed certificates
         rejectUnauthorized: false,
